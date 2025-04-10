@@ -5,14 +5,24 @@ const Home = () => (
   <main>
     <Container id="landing-page" fluid className="py-3">
       <Row className="align-middle text-center">
-        <Col xs={4}>
-          <Image src="next.svg" width="150px" alt="" />
-        </Col>
-
-        <Col xs={8} className="d-flex flex-column justify-content-center">
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Col>
+        <Image src="WarriorCourts2.jpg" fluid className="w-100" alt="Courts Image" />
+      </Row>
+      <Row>
+        <Container fluid className="py-3">
+          <Col className="text-center">
+            <h2>About</h2>
+            <p>
+              At the Warrior Rec Center, there is limited space and many people who want to 
+              use the courts to play basketball or volleyball.
+            </p>
+            <p>
+              This gets especially bad after 5 pm, when it can be hard to get a spot on the court 
+              with so many people competing. This web app seeks to solve this problem 
+              by allowing students to reserve time on the courts for their groups,
+              and to look for groups to join.
+            </p>
+          </Col>
+        </Container>
       </Row>
     </Container>
   </main>
