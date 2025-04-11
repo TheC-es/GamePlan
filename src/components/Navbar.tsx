@@ -8,14 +8,13 @@
 import { Container, Nav, Navbar, Image } from 'react-bootstrap';
 // import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
-const NavBar: React.FC = () =>
+const NavBar: React.FC = () => (
   // The following constants are left in for future use.
   // const { data: session } = useSession();
   // const currentUser = session?.user?.email;
   // const userWithRole = session?.user as { email: string; randomKey: string };
   // const role = userWithRole?.randomKey;
   // const pathName = usePathname();
-   (
     <Navbar bg="light" expand="lg">
       <Container>
         <Image src="dummyLogo.png" width="150px" alt="Logo" className="p-2" />
