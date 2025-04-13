@@ -18,7 +18,7 @@ const NavBar: React.FC = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Image src="dummyLogo.png" width="150px" alt="Logo" className="p-2" />
+        <Image src="/dummyLogo.png" width="150px" alt="Logo" className="p-2" />
         <Navbar.Brand href="/">GamePlan</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -31,10 +31,10 @@ const NavBar: React.FC = () => {
           </Nav.Link>
           </Nav>
           <Nav>
-          <Nav.Link href="">
+          <Nav.Link href="/auth/signin">
             Sign In
           </Nav.Link>
-          <Nav.Link href="">
+          <Nav.Link href="/auth/signup">
             Sign Up
           </Nav.Link>
           </Nav>
