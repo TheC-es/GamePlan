@@ -39,6 +39,9 @@ const NavBar: React.FC = () => {
           <Nav.Link href="/schedule2">
             Volleyball Schedule
           </Nav.Link>
+          <Nav.Link href="/aboutus">
+            About Us
+          </Nav.Link>
           </Nav>
           <Nav>
           <Nav.Link href="/auth/signin">
