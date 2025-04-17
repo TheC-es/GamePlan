@@ -31,7 +31,7 @@ const generateInitialSlots = (): MatchSlot[] => {
   return slots;
 };
 
-const SchedulePageVolleyball: React.FC = () => {
+const VolleyballSchedulePage: React.FC = () => {
   const [slots, setSlots] = useState<MatchSlot[]>(generateInitialSlots());
 
   const updateTeam = (
@@ -113,4 +113,4 @@ const SchedulePageVolleyball: React.FC = () => {
   );
 };
 
-export default SchedulePageVolleyball;
+export default VolleyballSchedulePage;
