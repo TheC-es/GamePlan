@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/jsx-indent, @typescript-eslint/indent */
 
 'use client';
@@ -28,6 +29,9 @@ const NavBar: React.FC = () => {
           </Nav.Link>
           <Nav.Link href="">
             Schedule Game
+          </Nav.Link>
+          <Nav.Link href="/schedule">
+            Basketball Schedule
           </Nav.Link>
           </Nav>
           <Nav>
