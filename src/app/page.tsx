@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
 /** The Home page. */
