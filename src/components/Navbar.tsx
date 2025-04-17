@@ -47,6 +47,9 @@ const NavBar: React.FC = () => {
           <Nav.Link href="/auth/signup">
             Sign Up
           </Nav.Link>
+          <Nav.Link href="/auth/signout">
+            Sign Out
+          </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
