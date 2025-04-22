@@ -22,43 +22,44 @@ const NavBar: React.FC = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Image src="/dummyLogo.png" width="150px" alt="Logo" className="p-2" />
-        <Navbar.Brand href="/">GamePlan</Navbar.Brand>
+        <a href="/">
+          <Image src="/dummyLogo.png" width="150px" alt="Logo" className="p-2" />
+        </a>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
-          <Nav.Link href="">
-            Games
-          </Nav.Link>
-          <Nav.Link href="\basketball">
-            Basketball
-          </Nav.Link>
-          <Nav.Link href="\volleyball">
-            Volleyball
-          </Nav.Link>
-          <Nav.Link href="">
-            Schedule Game
-          </Nav.Link>
-          <Nav.Link href="/schedule">
-            Basketball Schedule
-          </Nav.Link>
-          <Nav.Link href="/schedule2">
-            Volleyball Schedule
-          </Nav.Link>
-          <Nav.Link href="/aboutus">
-            About Us
-          </Nav.Link>
+        <Nav.Link href="">
+          Games
+        </Nav.Link>
+        <Nav.Link href="\basketball">
+          Basketball
+        </Nav.Link>
+        <Nav.Link href="\volleyball">
+          Volleyball
+        </Nav.Link>
+        <Nav.Link href="">
+          Schedule Game
+        </Nav.Link>
+        <Nav.Link href="/schedule">
+          Basketball Schedule
+        </Nav.Link>
+        <Nav.Link href="/schedule2">
+          Volleyball Schedule
+        </Nav.Link>
+        <Nav.Link href="/aboutus">
+          About Us
+        </Nav.Link>
           </Nav>
           <Nav>
-          <Nav.Link href="/auth/signin">
-            Sign In
-          </Nav.Link>
-          <Nav.Link href="/auth/signup">
-            Sign Up
-          </Nav.Link>
-          <Nav.Link href="/auth/signout">
-            Sign Out
-          </Nav.Link>
+        <Nav.Link href="/auth/signin">
+          Sign In
+        </Nav.Link>
+        <Nav.Link href="/auth/signup">
+          Sign Up
+        </Nav.Link>
+        <Nav.Link href="/auth/signout">
+          Sign Out
+        </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
