@@ -20,31 +20,50 @@ const AboutUs = () => (
           <h3>Alan Reeves</h3>
           <p>Major: Computer Science</p>
           <p>Contact: alandr@hawaii.edu</p>
-          <p>Github: https://github.com/AlanDReeves </p>
+          Github:
+          {' '}
+          <a href="https://github.com/AlanDReeves" target="_blank" rel="noopener noreferrer">
+            https://github.com/AlanDReeves
+          </a>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Anthony Nguyen</h3>
           <p>Major: Computer Science</p>
           <p>Contact: an34</p>
-          <p>Github: https://github.com/anthonyn1023</p>
+          Github:
+          {' '}
+          <a href="https://github.com/anthonyn1023" target="_blank" rel="noopener noreferrer">
+            https://github.com/anthonyn1023
+          </a>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Simon Lin</h3>
           <p>Major: Computer Science</p>
           <p>Contact: slin4@hawaii.edu</p>
-          <p>Github: https://github.com/simonwlin</p>
+          Github:
+          {' '}
+          <a href="https://github.com/simonwlin" target="_blank" rel="noopener noreferrer">
+            https://github.com/simonwlin
+          </a>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Angelo Rosal</h3>
           <p>Major: Computer Science</p>
           <p>Contact: arosal@hawaii.edu</p>
-          <p>Github: https://github.com/Angelo-Rosal</p>
+          Github:
+          {' '}
+          <a href="https://github.com/Angelo-Rosal" target="_blank" rel="noopener noreferrer">
+            https://github.com/Angelo-Rosal
+          </a>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Maya Buchanan</h3>
           <p>Major: Computer Science</p>
-          <p>Contact: maya26@hawaii.edu</p>
-          <p>Github: https://github.com/mayabuchanan27</p>
+          Github:
+          {' '}
+          <a href="https://github.com/mayabuchanan27" target="_blank" rel="noopener noreferrer">
+            https://github.com/mayabuchanan27
+          </a>
         </div>
       </Row>
     </Container>
