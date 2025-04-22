@@ -19,22 +19,37 @@ const AboutUs = () => (
         <div style={{ flex: 1 }}>
           <h3>Alan Reeves</h3>
           <p>hi</p>
+          <p>Major: </p>
+          <p>Contact: </p>
+          <p>Github: </p>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Anthony Nguyen</h3>
           <p>hi</p>
+          <p>Major: </p>
+          <p>Contact: </p>
+          <p>Github: </p>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Simon Lin</h3>
           <p>hi</p>
+          <p>Major: </p>
+          <p>Contact: </p>
+          <p>Github: </p>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Angelo Rosal</h3>
           <p>hi</p>
+          <p>Major: </p>
+          <p>Contact: </p>
+          <p>Github: </p>
         </div>
         <div style={{ flex: 1 }}>
           <h3>Maya Buchanan</h3>
           <p>hi</p>
+          <p>Major: </p>
+          <p>Contact: </p>
+          <p>Github: </p>
         </div>
       </Row>
     </Container>
