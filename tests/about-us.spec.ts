@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('About Us Page', () => {
   test('should display the header "Meet The Memebers"', async ({ page }) => {
-    await page.goto('http://localhost:3000/aboutus'); 
+    await page.goto('http://localhost:3000/aboutus');
     await expect(page.locator('h2')).toHaveText('Meet The Memebers');
   });
 
