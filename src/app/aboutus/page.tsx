@@ -29,7 +29,7 @@ const AboutUs = () => (
         <div style={{ flex: 1 }}>
           <h3>Anthony Nguyen</h3>
           <p>Major: Computer Science</p>
-          <p>Contact: an34</p>
+          <p>Contact: an34@hawaii.edu</p>
           Github:
           {' '}
           <a href="https://github.com/anthonyn1023" target="_blank" rel="noopener noreferrer">
@@ -59,6 +59,7 @@ const AboutUs = () => (
         <div style={{ flex: 1 }}>
           <h3>Maya Buchanan</h3>
           <p>Major: Computer Science</p>
+          <p>Contact: maya26@hawaii.edu</p>
           Github:
           {' '}
           <a href="https://github.com/mayabuchanan27" target="_blank" rel="noopener noreferrer">
