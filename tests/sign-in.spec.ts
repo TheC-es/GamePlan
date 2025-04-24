@@ -12,5 +12,6 @@ test('test', async ({ page }) => {
   await page.locator('input[name="email"]').press('Tab');
   await page.locator('input[name="password"]').fill('changeme');
   await page.getByRole('button', { name: 'Sign in' }).click();
+  await page.waitForURL('http://localhost:3000/');
   await expect(page.getByText('AboutAt the Warrior Rec')).toBeVisible();
 });
