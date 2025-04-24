@@ -7,13 +7,13 @@ const isWeekend = () => {
 
 test.describe('Schedule Page', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/basketball');
+    await page.goto('http://localhost:3000/volleyball');
   });
 
   test('displays correct heading for today', async ({ page }) => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = days[new Date().getDay()];
-    await expect(page.locator('h1')).toHaveText(`Basketball Games for ${today}`);
+    await expect(page.locator('h1')).toHaveText(`Volleyball Games for ${today}`);
   });
 
   const weekdayTest = isWeekend() ? test.skip : test;
