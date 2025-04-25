@@ -7,12 +7,13 @@ test.use({
 });
 
 test('test', async ({ page }) => {
+  // check if DATABASE_URL is set correctly
+  console.log(process.env.DATABASE_URL);
   await page.goto('http://localhost:3000/auth/signin');
   await page.locator('input[name="email"]').click();
   await page.locator('input[name="email"]').fill('john@foo.com');
   await page.locator('input[name="email"]').press('Tab');
   await page.locator('input[name="password"]').fill('changeme');
-  console.log('Before clicking sign in - Current URL:', page.url());
   await page.getByRole('button', { name: 'Sign in' }).click();
   // if successful, url will change to landing page.
   await page.waitForURL('http://localhost:3000/');
