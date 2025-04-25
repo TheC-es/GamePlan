@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { test, expect } from '@playwright/test';
 
 test.use({
@@ -13,6 +14,6 @@ test('test', async ({ page }) => {
   await page.locator('input[name="password"]').fill('changeme');
   console.log('Before clicking sign in - Current URL:', page.url());
   await page.getByRole('button', { name: 'Sign in' }).click();
-  console.log('After clicking, Current URL:', page.url());
-  await expect(page.getByText('AboutAt the Warrior Rec')).toBeVisible();
+  // if successful, url will change to landing page.
+  await page.waitForURL('http://localhost:3000/');
 });
