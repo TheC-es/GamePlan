@@ -37,6 +37,7 @@ jobs:
 
     env:
       DATABASE_URL: postgres://ciuser:cipassword@localhost:5432/cidb
+      POSTGRES_URL_NON_POOLING: postgres://ciuser:cipassword@localhost:5432/cidb
 
     steps:
     - uses: actions/checkout@v4
