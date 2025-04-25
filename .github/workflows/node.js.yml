@@ -16,6 +16,8 @@ jobs:
 
     services:
       postgres:
+        image:
+          postgres:15
         env:
           POSTGRES_USER: ciuser
           POSTGRES_PASSWORD: cipassword
