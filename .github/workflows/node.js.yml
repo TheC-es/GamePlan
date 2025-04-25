@@ -36,9 +36,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     env:
-      DATABASE_URL: postgres://ciuser:cipassword@postgres:5432/cidb
-      POSTGRES_URL_NON_POOLING: postgres://ciuser:cipassword@postgres:5432/cidb
-      POSTGRES_PRISMA_URL: postgres://ciuser:cipassword@postgres:5432/cidb
+      DATABASE_URL: postgres://ciuser:cipassword@localhost:5432/cidb
+      POSTGRES_URL_NON_POOLING: postgres://ciuser:cipassword@localhost:5432/cidb
+      POSTGRES_PRISMA_URL: postgres://ciuser:cipassword@localhost:5432/cidb
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
