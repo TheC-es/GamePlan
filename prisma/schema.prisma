@@ -52,6 +52,6 @@ model Reservation {
   owner         String
   sport         Sport
   day           Day
-  time          Int //i.e. 5, 6, 7, 8, 9
+  time          Int
   team_num      Team_Number @default 1
 }
