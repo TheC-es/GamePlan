@@ -29,17 +29,29 @@ model User {
   role     Role   @default(USER)
 }
 
-enum Condition {
-  excellent
-  good
-  fair
-  poor
+enum Sport {
+  Volleyball
+  Basketball
 }
 
-model Stuff {
-  id        Int       @id @default(autoincrement())
-  name      String
-  quantity  Int
-  condition Condition @default(good)
-  owner     String
+enum Day {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+}
+
+enum Team_Number {
+  1
+  2
+}
+
+model Reservation {
+  id            Int       @id @default(autoincrement())
+  owner         String
+  sport         Sport
+  day           Day
+  time          Int //i.e. 5, 6, 7, 8, 9
+  team_num      Team_Number @default 1
 }
