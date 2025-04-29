@@ -53,5 +53,5 @@ model Reservation {
   sport         Sport
   day           Day
   time          Int
-  team_num      Team_Number @default 1
+  team_num      Team_Number
 }
