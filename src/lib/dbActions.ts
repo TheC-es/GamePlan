@@ -1,66 +1,91 @@
 'use server';
 
-import { Stuff, Condition } from '@prisma/client';
+import { Sport, Day, Reservation } from '@prisma/client';
 import { hash } from 'bcrypt';
 import { redirect } from 'next/navigation';
 import { prisma } from './prisma';
 
 /**
- * Adds a new stuff to the database.
- * @param stuff, an object with the following properties: name, quantity, owner, condition.
+ * Creates new reservation in the database.
+ * @param info, an object containing the owner, team name, sport, day, time, and team number.
  */
-export async function addStuff(stuff: { name: string; quantity: number; owner: string; condition: string }) {
-  // console.log(`addStuff data: ${JSON.stringify(stuff, null, 2)}`);
-  let condition: Condition = 'good';
-  if (stuff.condition === 'poor') {
-    condition = 'poor';
-  } else if (stuff.condition === 'excellent') {
-    condition = 'excellent';
-  } else {
-    condition = 'fair';
+export async function createReservation(info:
+{ owner: string, team_name: string, sport: string, day: string, time: number, team_num: number }) {
+  // change sport string to Sport enum
+  let sport: Sport = 'Volleyball';
+  if (info.sport === 'Basketball') {
+    sport = 'Basketball';
   }
-  await prisma.stuff.create({
+  // change day string to Day enum.
+  // remember to use capital letter to start word.
+  let day: Day = 'Monday';
+  if (info.day === 'Tuesday') {
+    day = 'Tuesday';
+  } else if (info.day === 'Wednesday') {
+    day = 'Wednesday';
+  } else if (info.day === 'Thursday') {
+    day = 'Thursday';
+  } else if (info.day === 'Friday') {
+    day = 'Friday';
+  }
+  await prisma.reservation.create({
     data: {
-      name: stuff.name,
-      quantity: stuff.quantity,
-      owner: stuff.owner,
-      condition,
+      owner: info.owner,
+      team_name: info.team_name,
+      sport,
+      day,
+      time: info.time,
+      team_num: info.team_num,
     },
   });
-  // After adding, redirect to the list page
-  redirect('/list');
+  // redirect to the basketball schedule if reservation is for basketball.
+  if (sport === 'Basketball') {
+    redirect('/schedule');
+  } else {
+    // else redirect to the volleyball schedule.
+    redirect('/schedule2');
+  }
 }
 
 /**
- * Edits an existing stuff in the database.
- * @param stuff, an object with the following properties: id, name, quantity, owner, condition.
+ * Edits existing reservation in the database
+ * @param reservation, the new, edited reservation object already fitting the schema
+ * must have the ID of the reservation to change.
+ * Works like the edit stuff function from template.
  */
-export async function editStuff(stuff: Stuff) {
-  // console.log(`editStuff data: ${JSON.stringify(stuff, null, 2)}`);
-  await prisma.stuff.update({
-    where: { id: stuff.id },
+export async function editReservation(reservation: Reservation) {
+  await prisma.reservation.update({
+    where: { id: reservation.id },
     data: {
-      name: stuff.name,
-      quantity: stuff.quantity,
-      owner: stuff.owner,
-      condition: stuff.condition,
+      owner: reservation.owner,
+      team_name: reservation.team_name,
+      sport: reservation.sport,
+      day: reservation.day,
+      time: reservation.time,
+      team_num: reservation.team_num,
     },
   });
-  // After updating, redirect to the list page
-  redirect('/list');
+  // redirect to the basketball schedule if reservation is for basketball.
+  if (reservation.sport === 'Basketball') {
+    redirect('/schedule');
+  } else {
+    // else redirect to the volleyball schedule.
+    redirect('/schedule2');
+  }
 }
 
 /**
- * Deletes an existing stuff from the database.
- * @param id, the id of the stuff to delete.
+ * Removes a reservation from the database
+ * @param id, the ID of the reservation to remove.
+ * Based on the removeStuff function from template.
  */
-export async function deleteStuff(id: number) {
+export async function deleteReservation(id: number) {
   // console.log(`deleteStuff id: ${id}`);
-  await prisma.stuff.delete({
+  await prisma.reservation.delete({
     where: { id },
   });
-  // After deleting, redirect to the list page
-  redirect('/list');
+  // After deleting, redirect to the landing page.
+  redirect('/');
 }
 
 /**
