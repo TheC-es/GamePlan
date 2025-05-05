@@ -51,6 +51,7 @@ model Reservation {
   day           Day
   time          Int
   team_num      Int
+  court         Int
   @@unique([owner, day, time], name: "owner_day_time")
   // no entry may have the same owner, day, and time as another entry.
   // overlapping on one or more is acceptable, but not all 3.
