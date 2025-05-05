@@ -1,4 +1,5 @@
-import { PrismaClient, Role } from '@prisma/client';
+/* eslint-disable no-await-in-loop */
+import { PrismaClient, Role, Sport, Day } from '@prisma/client';
 import { hash } from 'bcrypt';
 import * as config from '../config/settings.development.json';
 
@@ -19,8 +20,29 @@ async function main() {
         role,
       },
     });
-    // console.log(`  Created user: ${user.email} with role: ${user.role}`);
   });
+  for (const reservation of config.defaultReservations) {
+    console.log(`  Creating reservation for ${reservation.owner}`);
+    await prisma.reservation.upsert({
+      where: {
+        // relies on uniqueness of owner, day, and time.
+        owner_day_time: {
+          owner: reservation.owner,
+          day: reservation.day as Day,
+          time: reservation.time,
+        },
+      },
+      update: {},
+      create: {
+        owner: reservation.owner,
+        team_name: reservation.team_name,
+        sport: reservation.sport as Sport,
+        day: reservation.day as Day,
+        time: reservation.time,
+        team_num: reservation.team_num,
+      },
+    });
+  }
 }
 main()
   .then(() => prisma.$disconnect())
