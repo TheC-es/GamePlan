@@ -10,7 +10,7 @@ import { prisma } from './prisma';
  * @param info, an object containing the owner, team name, sport, day, time, and team number.
  */
 export async function createReservation(info:
-{ owner: string, team_name: string, sport: string, day: string, time: number, team_num: number }) {
+{ owner: string, team_name: string, sport: string, day: string, time: number, team_num: number, court: number }) {
   // change sport string to Sport enum
   let sport: Sport = 'Volleyball';
   if (info.sport === 'Basketball') {
@@ -36,6 +36,7 @@ export async function createReservation(info:
       day,
       time: info.time,
       team_num: info.team_num,
+      court: info.court,
     },
   });
   // redirect to the basketball schedule if reservation is for basketball.
@@ -63,6 +64,7 @@ export async function editReservation(reservation: Reservation) {
       day: reservation.day,
       time: reservation.time,
       team_num: reservation.team_num,
+      court: reservation.court,
     },
   });
   // redirect to the basketball schedule if reservation is for basketball.
