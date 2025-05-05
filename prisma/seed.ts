@@ -40,6 +40,7 @@ async function main() {
         day: reservation.day as Day,
         time: reservation.time,
         team_num: reservation.team_num,
+        court: reservation.court,
       },
     });
   }

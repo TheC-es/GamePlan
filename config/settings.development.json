@@ -12,7 +12,7 @@
   ],
 
   "defaultReservations" : [
-    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 1},
-    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 2}
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 2, "court": 1}
   ]
 }
