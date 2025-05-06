@@ -10,7 +10,7 @@ const AboutUs = () => (
 
       <Row className="text-center mt-4">
         <Col>
-          <h2>Meet The Memebers</h2>
+          <h2>Meet The Members</h2>
         </Col>
       </Row>
 
