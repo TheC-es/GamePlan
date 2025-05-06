@@ -1,6 +1,9 @@
-'use client';
-
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/jsx-one-expression-per-line */
+// NOTE: This file no longer uses the client side.
+import { prisma } from '@/lib/prisma';
+import React from 'react';
+import { Reservation } from '@prisma/client';
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 const times = ['5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM', '9:00 PM'];
@@ -13,38 +16,36 @@ type MatchSlot = {
   team2: string;
 };
 
-const generateInitialSlots = (): MatchSlot[] => {
+// replaces old generateInitialSlots function.
+function generateSchedule(reservations: Reservation[]): MatchSlot[] {
   const slots: MatchSlot[] = [];
   for (let court = 1; court <= 2; court++) {
     for (const day of days) {
       for (const time of times) {
+        // filter reservations to ensure only applicable ones are included.
+        const slotReservations = reservations.filter(
+          r => r.court === court && r.day === day && r.time === parseInt(time, 10) && r.sport === 'Basketball',
+        );
+
         slots.push({
           court,
           day,
           time,
-          team1: 'Free',
-          team2: 'Free',
+          // use either the reservation's team name or write Free if there is no reservation.
+          team1: slotReservations[0]?.team_name || 'Free',
+          team2: slotReservations[1]?.team_name || 'Free',
         });
       }
     }
   }
   return slots;
-};
+}
 
-const SchedulePage: React.FC = () => {
-  const [slots, setSlots] = useState<MatchSlot[]>(generateInitialSlots());
-
-  const updateTeam = (
-    court: number,
-    day: string,
-    time: string,
-    team: 'team1' | 'team2',
-    value: string,
-  ) => {
-    setSlots(prev => prev.map(slot => (slot.court === court && slot.day === day && slot.time === time
-      ? { ...slot, [team]: value }
-      : slot)));
-  };
+// replaces old BasketballSchedulePage constant.
+// This is necessary to allow database requests.
+export default async function BasketballSchedulePage() {
+  const reservations = await prisma.reservation.findMany();
+  const slots = generateSchedule(reservations);
 
   return (
     <div style={{ padding: '2rem' }}>
@@ -52,9 +53,7 @@ const SchedulePage: React.FC = () => {
       {Array.from({ length: 2 }, (_, i) => i + 1).map(court => (
         <div key={court} style={{ marginBottom: '3rem' }}>
           <h2>
-            Court
-            {' '}
-            {court}
+            Court {court}
           </h2>
           <table border={1} cellPadding={8} style={{ width: '100%', textAlign: 'center' }}>
             <thead>
@@ -65,7 +64,7 @@ const SchedulePage: React.FC = () => {
                 ))}
               </tr>
               <tr>
-                <td aria-hidden="true" />
+                <td />
                 {days.map(day => (
                   <React.Fragment key={day}>
                     <td>Team 1</td>
@@ -79,25 +78,26 @@ const SchedulePage: React.FC = () => {
                 <tr key={time}>
                   <td>{time}</td>
                   {days.map(day => {
-                    const slot = slots.find(s => s.court === court && s.day === day && s.time === time);
+                    const slot = slots.find(
+                      s => s.court === court && s.day === day && s.time === time,
+                    );
                     return (
                       <React.Fragment key={`${court}-${day}-${time}`}>
                         <td>
                           <input
                             type="text"
                             value={slot?.team1 || ''}
-                            onChange={e => updateTeam(court, day, time, 'team1', e.target.value)}
+                            // inputs are now read only so that users do not change text for reservations.
+                            readOnly
                             style={{ width: '100%' }}
-                            aria-label={`Court ${court} - ${day} ${time} - Team 1`}
                           />
                         </td>
                         <td>
                           <input
                             type="text"
                             value={slot?.team2 || ''}
-                            onChange={e => updateTeam(court, day, time, 'team2', e.target.value)}
+                            readOnly
                             style={{ width: '100%' }}
-                            aria-label={`Court ${court} - ${day} ${time} - Team 2`}
                           />
                         </td>
                       </React.Fragment>
@@ -111,6 +111,4 @@ const SchedulePage: React.FC = () => {
       ))}
     </div>
   );
-};
-
-export default SchedulePage;
+}
