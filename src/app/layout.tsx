@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Oswald } from 'next/font/google';
 import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/Navbar';
 import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Oswald({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Game Plan',

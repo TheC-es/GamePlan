@@ -2,27 +2,21 @@ import { Col, Container, Row, Image } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
-    <Container>
+  <footer className="mt-auto py-3 custom-footer">
+    <Container className="text-center">
       <Row>
         <Col>
-          <Image src="/dummyLogo.png" width={100} className="p-2" />
+          <Image src="/logo.jpg" width={100} className="p-2" />
           <a href="https://thec-es.github.io/" style={{ color: 'inherit', textDecoration: 'none' }}>The C+es website</a>
         </Col>
         <Col>
           <h5>Contributors</h5>
-          <ul>
-            <li>Alan Reeves</li>
-            <li>Anthony Nguyen</li>
-            <li>Simon Lin</li>
-            <li>Angelo Rosal</li>
-            <li>Maya Buchanan</li>
-          </ul>
+          <p>Alan Reeves, Anthony Nguyen, Simon Lin, Angelo Rosal, Maya Buchanan</p>
         </Col>
         <Col>
           <h5>Contact Information</h5>
-          <p>Phone: (808) 888-8888</p>
-          <p>Email: changeme@hawaii.edu</p>
+          <p>Phone: (808) 956-5490</p>
+          <p>Email: wrcsuprt@hawaii.edu</p>
         </Col>
       </Row>
     </Container>

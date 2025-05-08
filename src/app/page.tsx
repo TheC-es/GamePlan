@@ -4,14 +4,14 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 /** The Home page. */
 const Home = () => (
   <main>
-    <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
+    <Container id="landing-page" fluid className="px-0">
+      <Row className="gx-0">
         <Image src="WarriorCourts2.jpg" fluid className="w-100" alt="Courts Image" />
       </Row>
       <Row>
         <Container fluid className="py-3">
           <Col className="text-center">
-            <h2>About</h2>
+            <h2>About Game Plan</h2>
             <p>
               At the Warrior Rec Center, there is limited space and many people who want to
               use the courts to play basketball or volleyball.
