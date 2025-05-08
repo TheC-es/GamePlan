@@ -3,7 +3,7 @@ import { Col, Container, Row, Image } from 'react-bootstrap';
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
   <footer className="mt-auto py-3 custom-footer">
-    <Container>
+    <Container className="text-center">
       <Row>
         <Col>
           <Image src="/logo.jpg" width={100} className="p-2" />
@@ -11,13 +11,7 @@ const Footer = () => (
         </Col>
         <Col>
           <h5>Contributors</h5>
-          <ul>
-            <li>Alan Reeves</li>
-            <li>Anthony Nguyen</li>
-            <li>Simon Lin</li>
-            <li>Angelo Rosal</li>
-            <li>Maya Buchanan</li>
-          </ul>
+          <p>Alan Reeves, Anthony Nguyen, Simon Lin, Angelo Rosal, Maya Buchanan</p>
         </Col>
         <Col>
           <h5>Contact Information</h5>

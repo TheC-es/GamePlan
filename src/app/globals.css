@@ -25,19 +25,21 @@ body {
 .custom-navbar .nav-link,
 .custom-navbar .navbar-brand {
   color: rgb(0, 0, 0) !important;
+  font-size: 20px;
 }
 
 .custom-navbar .nav-link:hover {
-  color: #ffcc00 !important; /* optional hover color */
+  color: #ffcc00 !important; 
 }
 
 .custom-footer {
-  background-color: #4f764a; /* same as .custom-navbar */
+  background-color: #4f764a; 
   color: rgb(0, 0, 0);
 }
 
 .custom-footer a {
   color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .custom-footer a:hover {
@@ -46,9 +48,19 @@ body {
 
 .custom-footer h5 {
   color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
-.custom-footer li,
 .custom-footer p {
   margin-bottom: 0.3rem;
+  font-size: 15px;
 }
+
+p {
+  font-size: 25px; 
+}
+
+h2 {
+  font-size: 40px;
+}
+

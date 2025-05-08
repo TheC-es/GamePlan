@@ -11,7 +11,7 @@ const Home = () => (
       <Row>
         <Container fluid className="py-3">
           <Col className="text-center">
-            <h2>About</h2>
+            <h2>About Game Plan</h2>
             <p>
               At the Warrior Rec Center, there is limited space and many people who want to
               use the courts to play basketball or volleyball.
