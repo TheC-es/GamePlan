@@ -24,9 +24,31 @@ body {
 
 .custom-navbar .nav-link,
 .custom-navbar .navbar-brand {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .custom-navbar .nav-link:hover {
   color: #ffcc00 !important; /* optional hover color */
+}
+
+.custom-footer {
+  background-color: #4f764a; /* same as .custom-navbar */
+  color: rgb(0, 0, 0);
+}
+
+.custom-footer a {
+  color: rgb(0, 0, 0);
+}
+
+.custom-footer a:hover {
+  color: #ffcc00;
+}
+
+.custom-footer h5 {
+  color: rgb(0, 0, 0);
+}
+
+.custom-footer li,
+.custom-footer p {
+  margin-bottom: 0.3rem;
 }

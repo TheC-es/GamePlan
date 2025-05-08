@@ -2,7 +2,7 @@ import { Col, Container, Row, Image } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
+  <footer className="mt-auto py-3 custom-footer">
     <Container>
       <Row>
         <Col>
@@ -21,8 +21,8 @@ const Footer = () => (
         </Col>
         <Col>
           <h5>Contact Information</h5>
-          <p>Phone: (808) 888-8888</p>
-          <p>Email: changeme@hawaii.edu</p>
+          <p>Phone: (808) 956-5490</p>
+          <p>Email: wrcsuprt@hawaii.edu</p>
         </Col>
       </Row>
     </Container>

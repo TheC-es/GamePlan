@@ -4,8 +4,8 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 /** The Home page. */
 const Home = () => (
   <main>
-    <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
+    <Container id="landing-page" fluid className="px-0">
+      <Row className="gx-0">
         <Image src="WarriorCourts2.jpg" fluid className="w-100" alt="Courts Image" />
       </Row>
       <Row>
