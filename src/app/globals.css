@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .wrapper {
   box-sizing: border-box;
   min-height: 100%;
@@ -15,4 +16,17 @@ body {
 
 .background-image {
   background-image: url("/WarriorCourts.jpg");
+}
+
+.custom-navbar {
+  background-color: #4f764a;  
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffcc00 !important; /* optional hover color */
 }

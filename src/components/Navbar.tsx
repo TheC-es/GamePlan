@@ -20,10 +20,10 @@ const NavBar: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pathName = usePathname();
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
+    <Navbar expand="lg" className="custom-navbar py-3">
+      <Container fluid>
         <a href="/">
-          <Image src="/dummyLogo.png" width="150px" alt="Logo" className="p-2" />
+          <Image src="/logo.jpg" width="200" alt="Logo" className="p-2" />
         </a>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

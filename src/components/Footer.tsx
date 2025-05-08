@@ -6,7 +6,7 @@ const Footer = () => (
     <Container>
       <Row>
         <Col>
-          <Image src="/dummyLogo.png" width={100} className="p-2" />
+          <Image src="/logo.jpg" width={100} className="p-2" />
           <a href="https://thec-es.github.io/" style={{ color: 'inherit', textDecoration: 'none' }}>The C+es website</a>
         </Col>
         <Col>
