@@ -13,6 +13,66 @@
 
   "defaultReservations" : [
     { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 1, "court": 1},
-    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 2, "court": 1}
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 9, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 8, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 8, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Tuesday", "time": 9, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Tuesday", "time": 9, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Tuesday", "time": 8, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Tuesday", "time": 8, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Wednesday", "time": 9, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Wednesday", "time": 9, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Wednesday", "time": 8, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Wednesday", "time": 8, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Thursday", "time": 9, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Thursday", "time": 9, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Thursday", "time": 8, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Thursday", "time": 8, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Friday", "time": 9, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Friday", "time": 9, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Friday", "time": 8, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Friday", "time": 8, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 7, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 7, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Monday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Monday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Tuesday", "time": 7, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Tuesday", "time": 7, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Tuesday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Tuesday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Wednesday", "time": 7, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Wednesday", "time": 7, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Wednesday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Wednesday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Thursday", "time": 7, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Thursday", "time": 7, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Thursday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Thursday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Friday", "time": 7, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Friday", "time": 7, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Volleyball", "day": "Friday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Volleyball", "day": "Friday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Basketball", "day": "Thursday", "time": 5, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Basketball", "day": "Thursday", "time": 5, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Basketball", "day": "Thursday", "time": 6, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Basketball", "day": "Thursday", "time": 6, "team_num": 2, "court": 2},
+
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Basketball", "day": "Monday", "time": 5, "team_num": 1, "court": 1},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Basketball", "day": "Tuesday", "time": 5, "team_num": 2, "court": 1},
+    { "owner": "john@foo.com", "team_name": "John and Joe", "sport": "Basketball", "day": "Wednesday", "time": 5, "team_num": 1, "court": 2},
+    { "owner": "admin@foo.com", "team_name": "Admin and Bob", "sport": "Basketball", "day": "Thursday", "time": 5, "team_num": 2, "court": 2},
+
+    { "owner": "bill@foo.com", "team_name": "Bill and Joe", "sport": "Basketball", "day": "Monday", "time": 5, "team_num": 1, "court": 1},
+    { "owner": "bob@foo.com", "team_name": "Admin and Bob", "sport": "Basketball", "day": "Tuesday", "time": 5, "team_num": 2, "court": 1}
   ]
 }
