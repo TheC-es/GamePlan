@@ -92,3 +92,8 @@ p {
   font-size: 40px;
   padding: 20px;
 }
+
+.hero-overlay h1 {
+  font-size: 60px;
+  padding: 20px;
+}
