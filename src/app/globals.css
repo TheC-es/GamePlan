@@ -19,7 +19,7 @@ body {
 }
 
 .custom-navbar {
-  background-color: #4f764a;  
+  background-color: #41633d;  
 }
 
 .custom-navbar .nav-link,
@@ -33,7 +33,7 @@ body {
 }
 
 .custom-footer {
-  background-color: #4f764a; 
+  background-color:  #41633d;  
   color: rgb(0, 0, 0);
 }
 
@@ -57,10 +57,38 @@ body {
 }
 
 p {
-  font-size: 25px; 
+  font-size: 20px; 
 }
 
-h2 {
+
+.hero-overlay {
+  position: relative;
+  height: 100vh; /* Adjust height as needed */
+  background-image: url('/Court.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.509); 
+  z-index: 2;
+}
+
+.hero-overlay > * {
+  z-index: 3; 
+  position: relative;
+}
+
+.hero-overlay p {
   font-size: 40px;
+  padding: 20px;
 }
-
