@@ -6,7 +6,8 @@
 // These imports will be used for future functionality
 import { useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
-import { Container, Nav, Navbar, Image } from 'react-bootstrap';
+import { Container, Nav, Navbar, Image, DropdownButton, NavDropdown } from 'react-bootstrap';
+import { PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 // import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
 const NavBar: React.FC = () => {
@@ -50,16 +51,27 @@ const NavBar: React.FC = () => {
           About Us
         </Nav.Link>
           </Nav>
-          <Nav>
-        <Nav.Link href="/auth/signin">
-          Sign In
-        </Nav.Link>
-        <Nav.Link href="/auth/signup">
-          Sign Up
-        </Nav.Link>
-        <Nav.Link href="/auth/signout">
-          Sign Out
-        </Nav.Link>
+          <Nav className="ms-auto pe-3">
+            <DropdownButton
+              size="lg"
+              align="end"
+              className="rounded-0"
+              variant="none"
+              style={{ backgroundColor: '#4f764a', border: 'none' }}
+              title="Login"
+              id="login-dropdown"
+            >
+                  <NavDropdown.Item id="login-dropdown-sign-in" href="/auth/signin">
+                    <PersonFill />
+                    {' '}
+                    Sign In
+                  </NavDropdown.Item>
+                  <NavDropdown.Item id="login-dropdown-sign-up" href="/auth/signup">
+                    <PersonPlusFill />
+                    {' '}
+                    Sign Up
+                  </NavDropdown.Item>
+            </DropdownButton>
           </Nav>
         </Navbar.Collapse>
       </Container>
